@@ -7,12 +7,10 @@ public class MyMain {
         MyQueue obj=new MyQueue(5);
         System.out.println(obj.isEmpty());
         System.out.println(obj.peek());
-       // System.out.println(obj.deueue());
         System.out.println("size= "+obj.getSize());
         System.out.println(obj.enqueue(1));
         System.out.println(obj.enqueue(2));
         System.out.println(obj.enqueue(3));
-        System.out.println("size= "+obj.getSize());
         System.out.println(obj.enqueue(4));
         System.out.println(obj.enqueue(5));
         System.out.println(obj.enqueue(6));
@@ -20,6 +18,7 @@ public class MyMain {
 
         System.out.println(obj.isEmpty());
         System.out.println(obj.peek());
+        
         System.out.println(obj.deueue());
         System.out.println(obj.deueue());
         System.out.println(obj.deueue());
