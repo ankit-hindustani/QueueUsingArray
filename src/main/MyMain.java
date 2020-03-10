@@ -26,6 +26,9 @@ public class MyMain {
         System.out.println(obj.deueue());
         System.out.println(obj.deueue());
 
+        System.out.println("size= "+obj.getSize());
+        //here size is zero but can't be insert new element. this is a bug.
+        
         System.out.println(obj.enqueue(11));
         System.out.println(obj.enqueue(22));
         System.out.println(obj.enqueue(33));
