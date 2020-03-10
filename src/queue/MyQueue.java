@@ -32,7 +32,8 @@ public class MyQueue {
         return response;
     }
 
-    public int deueue(){
+    //dequeue with O(1)
+    public int dequeue(){
         int response=0;
         if(isEmpty()){
             System.out.print("can't dequeue, queue is empty");
@@ -44,6 +45,30 @@ public class MyQueue {
         }
         return response;
     }
+
+
+
+
+    public int dequeueWithOrderN(){
+        int response=0;
+        if(isEmpty()){
+            System.out.print("can't dequeue, queue is empty =");
+        }
+        else{
+            response=queue[0];
+            if(size>1) {
+
+                for (int i = 1; i < size; i++) {
+                    queue[i - 1] = queue[i];
+                }
+            }
+            rear--;
+            size--;
+        }
+        return response;
+    }
+
+
 
     public int peek(){
         int response=0;
