@@ -32,7 +32,7 @@ public class MyQueue {
         return response;
     }
 
-    //dequeue with O(1)
+    //dequeue with O(1), dequeue with O(1) has a problem if one time queue is full then you can't enqueue again.
     public int dequeue(){
         int response=0;
         if(isEmpty()){
@@ -48,20 +48,25 @@ public class MyQueue {
 
 
 
-
-    public int dequeueWithOrderN(){
+//remove element with O(n), all bug fixed
+     public int dequeueWithOrderN(){
         int response=0;
         if(isEmpty()){
             System.out.print("can't dequeue, queue is empty =");
         }
         else{
             response=queue[0];
+            //if only one element in the queue
             if(size>1) {
 
                 for (int i = 1; i < size; i++) {
                     queue[i - 1] = queue[i];
                 }
             }
+            else{
+                queue[0]=0;
+            }
+
             rear--;
             size--;
         }
