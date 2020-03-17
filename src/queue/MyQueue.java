@@ -32,7 +32,7 @@ public class MyQueue {
         return response;
     }
 
-    //dequeue with O(1), dequeue with O(1) has a problem if one time queue is full then you can't enqueue again.
+    //dequeue with O(1), dequeue with O(1) has a problem if once time queue is full then you can't enqueue again.
     public int dequeue(){
         int response=0;
         if(isEmpty()){
